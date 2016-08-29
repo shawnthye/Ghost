@@ -12,7 +12,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'https://shawn.thye.me',,
-        mail: {},
+        mail: {
+			transport: 'SMTP',
+			options: {
+				service: 'Gmail',
+				auth: {
+					user: 'example@gmail.com',
+					pass: 'password'
+				}
+			}
+		},
         database: {
             client: 'sqlite3',
             connection: {
